@@ -1,0 +1,120 @@
+/* Fonts */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url(../fonts/SourceSansPro-Regular.ttf);
+}
+
+/* Start global rules */
+:root {
+    --main-color: #06b2b6;
+    --second-main-color: #404040;
+    --third-main-color: #a6a6a6;
+    --fourth-color: #dddddd;
+    --fifth-color: #fff;
+    --main-transition-duration: 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+  padding-inline: 0.9375rem;
+  margin-inline: auto;
+}
+
+/* Small */
+@media (min-width: 48em) {
+    .container {
+        inline-size: 46.875em;
+    }
+}
+
+/* Medium */
+@media (min-width: 62em) {
+    .container {
+        inline-size: 60.625em;
+    }
+}
+
+/* Large */
+@media (min-width: 75em) {
+    .container {
+        inline-size: 73.125em;
+    }
+}
+
+/* End global rules */
+
+/* Start contacts navbar */
+.contacts-nav{
+    block-size: 3.5em;
+background-color: var(--fourth-color);
+font-size: 0.9375rem;
+}
+
+.contacts-nav .container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.social__icon{
+color: var(--second-main-color);
+margin-inline: 0.625rem;
+}
+
+.contacts{
+    font-weight: 700;
+    color: var(--second-main-color);
+}
+
+.contacts .contacts__info:not(:last-child){
+  margin-inline-end: 2rem;
+}
+
+.contact__info--phone,
+.contact__info--mail{
+    font-weight: 400;
+    color: var(--third-main-color);
+}
+
+.appoinment-btn{
+    background-color: var(--main-color);
+    border-radius: 0.5rem;      
+    color: var(--fifth-color);
+    padding: 0.625rem 1.25rem;
+}
+
+@media (max-width: 60em) {
+    .contacts-nav{
+        display: none;
+    }
+}
+
+/* End contacts navbar */
