@@ -17,7 +17,7 @@
     --third-main-color: #a6a6a6;
     --fourth-color: #dddddd;
     --fifth-color: #fff;
-    --main-transition-duration: 0.3s;
+    --main-transition-duration: 0.4s;
 }
 
 html {
@@ -45,8 +45,8 @@ a {
 }
 
 .container {
-  padding-inline: 0.9375rem;
-  margin-inline: auto;
+    padding-inline: 0.9375rem;
+    margin-inline: auto;
 }
 
 /* Small */
@@ -73,10 +73,10 @@ a {
 /* End global rules */
 
 /* Start contacts navbar */
-.contacts-nav{
-    block-size: 3.5em;
-background-color: var(--fourth-color);
-font-size: 0.9375rem;
+.contacts-nav {
+    block-size: 4em;
+    background-color: var(--fifth-color);
+    font-size: 0.9375rem;
 }
 
 .contacts-nav .container {
@@ -84,35 +84,53 @@ font-size: 0.9375rem;
     justify-content: space-between;
 }
 
-.social__icon{
-color: var(--second-main-color);
-margin-inline: 0.625rem;
+.social__icon {
+    color: var(--second-main-color);
+    margin-inline: 0.625rem;
+    transition: var(--main-transition-duration);
 }
 
-.contacts{
+.social__icon:hover {
+    color: var(--main-color);
+}
+
+.contacts {
     font-weight: 700;
     color: var(--second-main-color);
 }
 
-.contacts .contacts__info:not(:last-child){
-  margin-inline-end: 2rem;
+.contacts .contacts__info:not(:last-child) {
+    margin-inline-end: 2rem;
 }
 
 .contact__info--phone,
-.contact__info--mail{
+.contact__info--mail {
     font-weight: 400;
     color: var(--third-main-color);
+    transition: var(--main-transition-duration);
 }
 
-.appoinment-btn{
+.contact__info--phone:hover,
+.contact__info--mail:hover {
+    color: var(--main-color);
+}
+
+.appoinment-btn {
     background-color: var(--main-color);
-    border-radius: 0.5rem;      
+    border-radius: 0.5rem;
     color: var(--fifth-color);
-    padding: 0.625rem 1.25rem;
+    padding: 0.5rem 1.25rem;
+    transition: var(--main-transition-duration);
 }
 
-@media (max-width: 60em) {
-    .contacts-nav{
+.appoinment-btn:hover {
+    background-color: var(--fifth-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+@media (max-width: 62em) {
+    .contacts-nav {
         display: none;
     }
 }
