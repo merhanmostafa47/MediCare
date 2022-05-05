@@ -18,7 +18,7 @@
     --fourth-color: #dddddd;
     --fifth-color: #fff;
     --main-transition-duration: 0.4s;
-    --element-block-size: 5rem;
+    --element-block-size: 4rem;
 }
 
 html {
@@ -58,25 +58,11 @@ a {
     }
 }
 
-/* Medium */
-/* @media (min-width: 62em) {
-    .container {
-        inline-size: 60.625em;
-    }
-} */
-
-/* Large */
-/* @media (min-width: 75em) {
-    .container {
-        inline-size: 73.125em;
-    }
-} */
-
 /* End global rules */
 
 /* Start contacts navbar */
 .contacts-nav {
-    block-size: 4em;
+    block-size: 3.5rem;
     background-color: var(--fifth-color);
     font-size: 0.9375rem;
 }
@@ -171,9 +157,6 @@ header .container {
 }
 
 .main-nav {
-    flex: 1;
-    display: flex;
-    align-items: center;
     justify-content: flex-end;
 }
 
@@ -245,7 +228,7 @@ header .container {
     }
 
     .toggle-menue:hover+.main-nav__list {
-        background-color: rgba(6, 178, 182, 0.7);
+        background-color: rgba(6, 178, 182, 0.9);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -264,3 +247,90 @@ header .container {
 }
 
 /* End header */
+
+/* Start main */
+
+/* Start landing */
+.landing .container {
+    background: url(../images/Landing_bg.jpg) no-repeat;
+    background-size: cover;
+    block-size: calc(100vh - 9rem);
+    color: var(--fifth-color);
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.landing__title {
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 700;
+    font-size: 3.125rem;
+}
+
+.landing__subtitle {
+    font-size: 18px;
+    inline-size: 50%;
+    margin-block: 0.5em 3em;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.landing__info {
+    justify-content: space-between;
+}
+
+.landing__btn {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 0.8rem 1.5rem;
+    min-inline-size: 10em;
+    text-align: center;
+    border-radius: 0.3125rem;
+    transition: var(--main-transition-duration);
+}
+
+.landing__btn:hover{
+transform: scale(110%, 110%);
+}
+
+.landing__btn:not(:last-child) {
+    margin-inline-end: 1.25rem;
+}
+
+.landing__btn--about {
+    background-color: var(--fifth-color);
+    color: var(--second-main-color);
+}
+
+.landing__btn--contact {
+    color: var(--fifth-color);
+    background-color: var(--main-color);
+}
+
+@media (max-width: 48em) {
+    .landing .container{
+        text-align: center;
+    }
+
+    .landing__title{
+        font-size: 2rem;
+    }
+
+    .landing__subtitle{
+        inline-size: 100%;
+        font-size: 0.9375rem;
+    }
+
+    .landing__info{
+        flex-direction: column;
+    }
+
+    .landing__btn:not(:last-child){
+        margin: 0 0 1.25rem;
+    }
+}
+/* End landing */
+
+/* End main */
