@@ -43,6 +43,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: var(--fifth-color);
 }
 
 .flex-center {
@@ -143,7 +144,6 @@ header .container {
 
 .logo {
     block-size: var(--element-block-size);
-    color: var(--fifth-color);
     font-size: 1.8rem;
     font-weight: bold;
     letter-spacing: 1px;
@@ -190,7 +190,6 @@ header .container {
 }
 
 .main-nav__link {
-    color: var(--fifth-color);
     text-transform: capitalize;
     font-size: 0.9375rem;
     transition: var(--main-transition-duration);
@@ -366,7 +365,7 @@ header .container {
     block-size: auto;
     grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
     grid-template-rows: repeat(2, 1fr);
-    gap: 15px;
+    gap: 0.9375rem;
 }
 
 .form__input {
@@ -379,7 +378,7 @@ header .container {
 
 .form__input::placeholder,
 .form__input option {
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-family: 'Poppins';
     color: var(--second-main-color);
     text-transform: capitalize;
@@ -420,7 +419,98 @@ header .container {
 
 /* End appoinment form */
 
-
 /* End landing */
 
 /* End main */
+
+/* Start footer */
+.footer .container {
+    background-image:
+        linear-gradient(#06b2b6, rgba(6, 178, 182, 0.7)),
+        url(../images/footer_bg.png);
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
+    min-block-size: 26em;
+    color: var(--fifth-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(21em, 1fr));
+    column-gap: 50px;
+    padding-block: 2rem;
+}
+
+.footer__title {
+    margin-block: 2em 1.8em;
+    font-family: 'SourceSansPro';
+    font-weight: 600;
+    font-size: 1.75rem;
+    letter-spacing: 0.1rem;
+    text-transform: capitalize;
+}
+
+.footer__description {
+    font-family: 'SourceSansPro';
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-block-end: 1.8em;
+    inline-size: 90%;
+}
+
+.footer__icon {
+    margin-inline-end: 0.75rem;
+}
+
+.footer__locatin-info {
+    margin-block-end: 1em;
+}
+
+.navigation__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1.25rem;
+}
+
+.main-nav__item {
+    transition: 0.5s;
+    text-transform: capitalize;
+}
+
+.navigation__item:hover {
+    transform: translateX(0.75rem);
+    font-weight: 600;
+}
+
+.navigation__link {
+    font-family: 'SourceSansPro';
+    letter-spacing: 0.0625rem;
+    font-size: 1.15rem;
+}
+
+.footer__images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem 1.25rem;
+}
+
+.footer__img {
+    inline-size: 100%;
+    object-fit: contain;
+}
+
+.copywrite {
+    block-size: 3em;
+    background-color: var(--main-color);
+    color: var(--fifth-color);
+    font-family: 'SourceSansPro';
+    font-size: 1rem;
+    font-weight: 500;
+    justify-content: center;
+}
+
+@media (max-width:72em) {
+    .navigation__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+    }
+}
+
+/* End footer */
