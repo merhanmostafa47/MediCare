@@ -92,12 +92,56 @@
         <div class="container flex-center">
           <h1 class="landing__title">we care about you</h1>
           <p class="landing__subtitle">
-            We at MediCare are always fully focused on helping your child and you to overcame any hurdle, whether it’s chicken pox or just a seasonal flue.
+            We at MediCare are always fully focused on helping your child and
+            you to overcame any hurdle, whether it’s chicken pox or just a
+            seasonal flue.
           </p>
           <div class="landing__info flex-center">
             <a href="#" class="landing__btn landing__btn--about">about us</a>
-            <a href="#" class="landing__btn landing__btn--contact">contact us</a>
+            <a href="#" class="landing__btn landing__btn--contact"
+              >contact us</a
+            >
           </div>
+          <!-- Start appoinment form -->
+          <div class="appoinment-form__container flex-center">
+            <h2 class="appoinment-form__title">make an appoinment</h2>
+            <form action="post" class="appoinment-form">
+              <input
+                name="Name"
+                type="text"
+                class="form__input"
+                placeholder="your name"
+              />
+              <input
+                name="Phone Number"
+                type="text"
+                class="form__input"
+                placeholder="your phone"
+              />
+              <input
+                name="DateTime"
+                type="datetime-local"
+                class="form__input"
+                placeholder="Date"
+              />
+              <select name="Doctor" class="form__input">
+                <option disabled hidden selected>Doctors</option>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+              </select>
+              <select name="department" class="form__input">
+                <option disabled hidden selected>Departments</option>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+              </select>
+              <button type="submit" class="form__btn">book an appoinmet</button>
+            </form>
+          </div>
+          <!-- End appoinment form -->
         </div>
       </section>
       <!-- End landing -->

@@ -32,6 +32,11 @@ html {
     font-family: 'Poppins';
 }
 
+*::selection {
+    background-color: var(--main-color);
+    color: var(--fifth-color);
+}
+
 ul {
     list-style: none;
 }
@@ -254,11 +259,12 @@ header .container {
 .landing .container {
     background: url(../images/Landing_bg.jpg) no-repeat;
     background-size: cover;
-    block-size: calc(100vh - 9rem);
+    min-block-size: calc(100vh - 9rem);
     color: var(--fifth-color);
     flex-direction: column;
     justify-content: center;
     position: relative;
+    margin-block-end: 15rem;
 }
 
 .landing__title {
@@ -269,7 +275,7 @@ header .container {
 }
 
 .landing__subtitle {
-    font-size: 18px;
+    font-size: 1.125rem;
     inline-size: 50%;
     margin-block: 0.5em 3em;
     text-align: center;
@@ -282,7 +288,7 @@ header .container {
 
 .landing__btn {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: capitalize;
     padding: 0.8rem 1.5rem;
     min-inline-size: 10em;
@@ -291,8 +297,8 @@ header .container {
     transition: var(--main-transition-duration);
 }
 
-.landing__btn:hover{
-transform: scale(110%, 110%);
+.landing__btn:hover {
+    transform: scale(110%, 110%);
 }
 
 .landing__btn:not(:last-child) {
@@ -310,27 +316,111 @@ transform: scale(110%, 110%);
 }
 
 @media (max-width: 48em) {
-    .landing .container{
+    .landing .container {
         text-align: center;
     }
 
-    .landing__title{
+    .landing__title {
         font-size: 2rem;
     }
 
-    .landing__subtitle{
+    .landing__subtitle {
         inline-size: 100%;
         font-size: 0.9375rem;
     }
 
-    .landing__info{
+    .landing__info {
         flex-direction: column;
     }
 
-    .landing__btn:not(:last-child){
+    .landing__btn:not(:last-child) {
         margin: 0 0 1.25rem;
     }
 }
+
+/* Start appoinment form */
+.appoinment-form__container {
+    background-color: var(--fifth-color);
+    box-shadow: 0 0 10px 3px #4040403d;
+    flex-direction: column;
+    position: absolute;
+    inset-block-end: 0;
+    transform: translateY(65%);
+    inline-size: 60%;
+    min-block-size: 16em;
+    padding: 3.5rem;
+}
+
+.appoinment-form__title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--second-main-color);
+    text-transform: uppercase;
+    margin-block-end: 2.5rem;
+}
+
+.appoinment-form {
+    position: relative;
+    display: grid;
+    inline-size: 100%;
+    block-size: auto;
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.form__input {
+    border-radius: 0.3125rem;
+    background-color: var(--fourth-color);
+    border: none;
+    outline: none;
+    padding: 0.625rem;
+}
+
+.form__input::placeholder,
+.form__input option {
+    font-size: 15px;
+    font-family: 'Poppins';
+    color: var(--second-main-color);
+    text-transform: capitalize;
+}
+
+.form__btn {
+    background-color: var(--main-color);
+    border-radius: 0.3125rem;
+    border: none;
+    color: var(--fifth-color);
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 0.625rem;
+    transition: var(--main-transition-duration);
+}
+
+.form__btn:hover {
+    background-color: var(--fifth-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+@media (max-width: 55em) {
+    .appoinment-form__container {
+        inline-size: 100%;
+        transform: translateY(100%);
+        padding: 2.5rem;
+    }
+}
+
+@media (min-width: 55em) and (max-width: 85em) {
+    .appoinment-form__container {
+        transform: translateY(80%);
+        inline-size: 68%;
+    }
+}
+
+/* End appoinment form */
+
+
 /* End landing */
 
 /* End main */
