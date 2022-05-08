@@ -550,7 +550,7 @@ header .container {
     min-block-size: 26em;
     color: var(--fifth-color);
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(21em, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
     column-gap: 50px;
     padding-block: 2rem;
 }
@@ -569,7 +569,7 @@ header .container {
     font-size: 1.15rem;
     line-height: 1.6;
     margin-block-end: 1.8em;
-    inline-size: 90%;
+    max-inline-size: clamp(70%, 80%, 90%);
 }
 
 .footer__icon {
@@ -626,6 +626,10 @@ header .container {
 @media (max-width:72em) {
     .navigation__list {
         grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+    }
+
+    .footer__images {
+        grid-template-columns: repeat(auto-fill, minmax(4em, 1fr));
     }
 }
 
