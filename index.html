@@ -45,7 +45,7 @@
             </a>
           </span>
         </div>
-        <a href="#" class="appoinment-btn">Appoinment</a>
+        <a href="#appoinment-form" class="appoinment-btn">Appoinment</a>
       </div>
     </div>
     <!-- End contacts navbar -->
@@ -53,12 +53,12 @@
     <!-- Start header -->
     <header class="flex-center">
       <div class="container flex-center">
-        <a href="#" class="logo flex-center">MediCare</a>
+        <a href="index.html" class="logo flex-center">MediCare</a>
         <nav class="main-nav flex-center">
           <i class="fas fa-bars toggle-menue"></i>
           <ul class="main-nav__list flex-center">
             <li class="main-nav__item flex-center">
-              <a href="#" class="main-nav__link">home</a>
+              <a href="index.html" class="main-nav__link">home</a>
             </li>
             <li class="main-nav__item flex-center">
               <a href="#" class="main-nav__link">about</a>
@@ -73,7 +73,7 @@
               <a href="#" class="main-nav__link">blog</a>
             </li>
             <li class="main-nav__item flex-center">
-              <a href="#" class="main-nav__link">contact</a>
+              <a href="contact-us.html" class="main-nav__link">contact</a>
             </li>
           </ul>
           <div class="form">
@@ -98,12 +98,15 @@
           </p>
           <div class="landing__info flex-center">
             <a href="#" class="landing__btn landing__btn--about">about us</a>
-            <a href="#" class="landing__btn landing__btn--contact"
+            <a href="contact-us.html" class="landing__btn landing__btn--contact"
               >contact us</a
             >
           </div>
           <!-- Start appoinment form -->
-          <div class="appoinment-form__container flex-center">
+          <div
+            class="appoinment-form__container flex-center"
+            id="appoinment-form"
+          >
             <h2 class="appoinment-form__title">make an appoinment</h2>
             <form action="post" class="appoinment-form">
               <input
@@ -145,106 +148,105 @@
         </div>
       </div>
       <!-- End landing -->
+
+      <!-- Start our service -->
+      <section class="services flex-center">
+        <div class="container">
+          <div class="main-heading">
+            <h2 class="main-heading__title">
+              OUR <span class="main-heading__title--cyan">service</span>
+            </h2>
+            <p class="main-heading__subtitle">
+              We are always fully focused on helping you with great commitment
+              and easy recovery.
+            </p>
+          </div>
+          <div class="services__cards">
+            <div class="service__card flex-center">
+              <div class="service__icon-container flex-center">
+                <i class="fa-solid fa-heart-pulse service__icon"></i>
+              </div>
+              <h3 class="service__title">Heart Surgery</h3>
+              <p class="service__subtitle">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+              </p>
+            </div>
+
+            <div class="service__card flex-center">
+              <div class="service__icon-container flex-center">
+                <i class="fa-solid fa-tooth service__icon"></i>
+              </div>
+              <h3 class="service__title">Dental Care</h3>
+              <p class="service__subtitle">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+              </p>
+            </div>
+
+            <div class="service__card flex-center">
+              <div class="service__icon-container flex-center">
+                <i class="fa-solid fa-truck-medical service__icon"></i>
+              </div>
+
+              <h3 class="service__title">Emargency Service</h3>
+              <p class="service__subtitle">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+              </p>
+            </div>
+
+            <div class="service__card flex-center">
+              <div class="service__icon-container flex-center">
+                <i class="fa-solid fa-dna service__icon"></i>
+              </div>
+              <h3 class="service__title">DNA Testing</h3>
+              <p class="service__subtitle">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+              </p>
+            </div>
+
+            <div class="service__card flex-center">
+              <div class="service__icon-container flex-center">
+                <i class="fa-solid fa-briefcase-medical service__icon"></i>
+              </div>
+              <h3 class="service__title">Blood Testing</h3>
+              <p class="service__subtitle">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+              </p>
+            </div>
+
+            <div class="service__card flex-center">
+              <div class="service__icon-container flex-center">
+                <i class="fa-solid fa-hand-holding-medical service__icon"></i>
+              </div>
+              <h3 class="service__title">24/7 Support</h3>
+              <p class="service__subtitle">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+              </p>
+            </div>
+
+            <div class="service__card flex-center">
+              <div class="service__icon-container flex-center">
+                <i class="fa-solid fa-capsules service__icon"></i>
+              </div>
+              <h3 class="service__title">General Treatment</h3>
+              <p class="service__subtitle">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+              </p>
+            </div>
+
+            <div class="service__card flex-center">
+              <div class="service__icon-container flex-center">
+                <i class="fa-solid fa-file-medical service__icon"></i>
+              </div>
+              <h3 class="service__title">Free Checkup</h3>
+              <p class="service__subtitle">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End our service -->
     </main>
-
-    <!-- Start our service -->
-    <section class="services flex-center">
-      <div class="container">
-        <div class="main-heading">
-          <h2 class="main-heading__title">
-            OUR <span class="main-heading__title--cyan">service</span>
-          </h2>
-          <p class="main-heading__subtitle">
-            We are always fully focused on helping you with great commitment and
-            easy recovery.
-          </p>
-        </div>
-        <div class="services__cards">
-          <div class="service__card flex-center">
-            <div class="service__icon-container flex-center">
-              <i class="fa-solid fa-heart-pulse service__icon"></i>
-            </div>
-            <h3 class="service__title">Heart Surgery</h3>
-            <p class="service__subtitle">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            </p>
-          </div>
-
-          <div class="service__card flex-center">
-            <div class="service__icon-container flex-center">
-              <i class="fa-solid fa-tooth service__icon"></i>
-            </div>
-            <h3 class="service__title">Dental Care</h3>
-            <p class="service__subtitle">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            </p>
-          </div>
-
-          <div class="service__card flex-center">
-            <div class="service__icon-container flex-center">
-              <i class="fa-solid fa-truck-medical service__icon"></i>
-            </div>
-
-            <h3 class="service__title">Emargency Service</h3>
-            <p class="service__subtitle">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            </p>
-          </div>
-
-          <div class="service__card flex-center">
-            <div class="service__icon-container flex-center">
-              <i class="fa-solid fa-dna service__icon"></i>
-            </div>
-            <h3 class="service__title">DNA Testing</h3>
-            <p class="service__subtitle">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            </p>
-          </div>
-
-          <div class="service__card flex-center">
-            <div class="service__icon-container flex-center">
-              <i class="fa-solid fa-briefcase-medical service__icon"></i>
-            </div>
-            <h3 class="service__title">Blood Testing</h3>
-            <p class="service__subtitle">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            </p>
-          </div>
-
-          <div class="service__card flex-center">
-            <div class="service__icon-container flex-center">
-              <i class="fa-solid fa-hand-holding-medical service__icon"></i>
-            </div>
-            <h3 class="service__title">24/7 Support</h3>
-            <p class="service__subtitle">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            </p>
-          </div>
-
-          <div class="service__card flex-center">
-            <div class="service__icon-container flex-center">
-              <i class="fa-solid fa-capsules service__icon"></i>
-            </div>
-            <h3 class="service__title">General Treatment</h3>
-            <p class="service__subtitle">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            </p>
-          </div>
-
-          <div class="service__card flex-center">
-            <div class="service__icon-container flex-center">
-              <i class="fa-solid fa-file-medical service__icon"></i>
-            </div>
-            <h3 class="service__title">Free Checkup</h3>
-            <p class="service__subtitle">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End our service -->
-
     <!-- End main -->
 
     <!-- Start footer -->
