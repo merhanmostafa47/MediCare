@@ -269,7 +269,7 @@ header .container {
 }
 
 .main-nav__item:hover::before {
-    left: 0;
+    inset-inline-start: 0;
 }
 
 .main-nav__link {
@@ -680,6 +680,136 @@ header .container {
 
 /* End contact main */
 
+/* Start about page */
+/* Start about section */
+
+.about .container {
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-block-end: 0;
+}
+
+.about__image-container {
+    inline-size: 45%;
+    max-block-size: 45em;
+    z-index: -1;
+}
+
+.about__image {
+    inline-size: 100%;
+    max-block-size: 45em;
+    object-fit: contain;
+}
+
+.about__info {
+    inline-size: 50%;
+    margin-block-start: 2rem;
+}
+
+.about__title {
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+.about__title--small {
+    color: var(--second-main-color);
+    font-size: 1.2rem;
+}
+
+.about__description {
+    color: var(--third-main-color);
+    font-size: 1rem;
+    inline-size: 75%;
+    line-height: 1.6;
+    margin-block: 1.5rem;
+}
+
+.about__btn {
+    background-color: var(--main-color);
+    border-radius: 0.5rem;
+    color: var(--fifth-color);
+    display: block;
+    inline-size: fit-content;
+    padding: 0.6rem 1.5rem;
+    transition: var(--main-transition-duration);
+}
+
+.about__btn:hover {
+    background-color: var(--fifth-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+.about__opening-hours {
+    margin-block-start: 4rem;
+}
+
+.about__hours-title {
+    color: var(--second-main-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.about__hours-icon {
+    font-family: 'FontAwesome';
+    margin-inline-end: 1rem;
+}
+
+.about__datetime {
+    margin-block-start: 1rem;
+}
+
+.about__day {
+    border-block-end: 1px dashed var(--third-main-color);
+    color: var(--second-main-color);
+    font-weight: 400;
+    flex-wrap: wrap;
+    text-transform: capitalize;
+    inline-size: 60%;
+    justify-content: space-between;
+    line-height: 3.5;
+}
+
+@media (max-width:65em) {
+    .about .container {
+        padding-block-end: 5em;
+    }
+
+    .about__image-container {
+        display: none;
+    }
+
+    .about__info {
+        inline-size: 100%;
+        margin-block-start: 0;
+        text-align: center;
+    }
+
+    .about__title {
+        font-size: 1.6rem;
+    }
+
+    .about__description {
+        inline-size: 100%;
+    }
+
+    .about__btn {
+        margin: auto;
+    }
+
+    .about__hours-title {
+        justify-content: center;
+    }
+
+    .about__day {
+        inline-size: 100%;
+        flex-direction: column;
+    }
+}
+
+/* End about section */
+/* End about page */
 
 /* Start footer */
 .footer .container {
