@@ -691,7 +691,7 @@ header .container {
 
 .about__image-container {
     inline-size: 45%;
-    max-block-size: 45em;
+    max-block-size: 39.5em;
     z-index: -1;
 }
 
@@ -809,6 +809,66 @@ header .container {
 }
 
 /* End about section */
+
+/* Start statistics section */
+.states .container {
+
+    background-image:
+        linear-gradient(rgb(6 178 182 / 40%), rgb(6 178 182 / 95%)),
+        url(../images/states_bg.jpg);
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position-y: 0, -25em;
+    justify-content: center;
+}
+
+.states-container {
+    inline-size: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3.125rem;
+}
+
+.state__box{
+    color: var(--fifth-color);
+    flex-direction: column;
+    font-size: 1.5rem;
+    justify-content: center;
+    line-height: 1.6;
+}
+
+.state__icon{
+  font-size: 2rem;
+  margin-block-end: 1rem;
+}
+
+.state__number{
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.state__description{
+    font-size: 0.9375rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+@media (max-width: 62em) {
+    .states .container {
+        background-image:
+        linear-gradient(rgb(6 178 182 / 40%), rgb(6 178 182 / 95%));
+    }
+    
+
+    .states-container {
+        grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+        grid-row-gap: 3.125rem;
+    }
+
+}
+/* End statistics section */
+
 /* End about page */
 
 /* Start footer */
