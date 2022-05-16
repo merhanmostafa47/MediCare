@@ -221,6 +221,7 @@ header {
 }
 
 header .container {
+    max-block-size: 4rem;
     justify-content: space-between;
     position: relative;
 }
@@ -233,15 +234,18 @@ header .container {
     justify-content: center;
 }
 
-.toggle-menue {
-    color: var(--fifth-color);
-    font-size: 1.2rem;
+.hamburger {
+    display: none;
+    cursor: pointer;
 }
 
-@media (min-width: 48em) {
-    .toggle-menue {
-        display: none;
-    }
+.bar {
+    display: block;
+    inline-size: 1.5625rem;
+    block-size: 0.1875rem;
+    margin: 0.3125rem auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--fifth-color);
 }
 
 .main-nav {
@@ -310,19 +314,33 @@ header .container {
         font-size: 1.5rem;
     }
 
-    .main-nav__list {
-        display: none;
+    .hamburger {
+        display: block;
     }
 
-    .toggle-menue:hover+.main-nav__list {
-        background-color: rgba(6, 178, 182, 0.9);
-        display: flex;
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(0.5rem) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-0.5rem) rotate(-45deg);
+    }
+
+    .main-nav__list {
+        position: fixed;
+        inset-inline-start: -100%;
+        inset-block-start: 4rem;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-end;
-        position: absolute;
-        inset-block-start: 100%;
+        background-color: rgba(6, 178, 182, 0.9);
         inline-size: 100%;
+        transition: 0.3s;
+    }
+
+    .main-nav__list.active {
         inset-inline-start: 0;
         z-index: 2;
     }
@@ -830,7 +848,7 @@ header .container {
     gap: 3.125rem;
 }
 
-.state__box{
+.state__box {
     color: var(--fifth-color);
     flex-direction: column;
     font-size: 1.5rem;
@@ -838,17 +856,17 @@ header .container {
     line-height: 1.6;
 }
 
-.state__icon{
-  font-size: 2rem;
-  margin-block-end: 1rem;
+.state__icon {
+    font-size: 2rem;
+    margin-block-end: 1rem;
 }
 
-.state__number{
+.state__number {
     font-size: 2.2rem;
     font-weight: 600;
 }
 
-.state__description{
+.state__description {
     font-size: 0.9375rem;
     font-weight: 400;
     text-transform: uppercase;
@@ -857,9 +875,9 @@ header .container {
 @media (max-width: 62em) {
     .states .container {
         background-image:
-        linear-gradient(rgb(6 178 182 / 40%), rgb(6 178 182 / 95%));
+            linear-gradient(rgb(6 178 182 / 40%), rgb(6 178 182 / 95%));
     }
-    
+
 
     .states-container {
         grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
@@ -867,6 +885,7 @@ header .container {
     }
 
 }
+
 /* End statistics section */
 
 /* End about page */
