@@ -19,8 +19,17 @@ document.querySelectorAll(".main-nav__link").forEach(
 // Start states section
 let nums = document.querySelectorAll(".state__number");
 let section = document.querySelector(".states");
+let started = false; // Function Started ? No
 
-nums.forEach((num) => startCount(num));
+window.onscroll = function () {
+  if (window.scrollY <= section.offsetTop) {
+    if (!started) {
+      nums.forEach((num) => startCount(num));
+    }
+    started = true;
+  }
+};
+
 
 function startCount(el) {
   let goal = el.dataset.goal;
