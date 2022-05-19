@@ -1036,13 +1036,145 @@ header .container {
 
 
     .states-container {
-        grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
         grid-row-gap: 3.125rem;
     }
 
 }
 
 /* End statistics section */
+
+/* Start doctors section */
+.doctors__cards {
+    inline-size: 90%;
+    block-size: 25em;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    gap: 1.6rem;
+}
+
+.doctor-card {
+    background-color: var(--fifth-color);
+    box-shadow: 0 0 5px 5px #a6a6a61c;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    block-size: 25em;
+}
+
+.doctor-card:hover {
+    cursor: pointer;
+    block-size: 27em;
+    transform: translateY(-1.5em);
+}
+
+.doctor-card__image {
+    block-size: 15em;
+    inline-size: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+    transition: .5s;
+}
+
+.doctor-card:hover .doctor-card__image {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.doctor-card__body {
+    background-color: var(--fifth-color);
+    color: var(--second-main-color);
+    flex-direction: column;
+    text-align: center;
+    transition: .5s;
+    padding: 2rem 1.5rem;
+}
+
+.doctor-card:hover .doctor-card__body {
+    background-color: var(--main-color);
+    color: var(--fifth-color);
+}
+
+.doctor-card__title {
+    font-weight: 600;
+    text-transform: capitalize;
+    position: relative;
+
+}
+
+.doctor-card__title::after {
+    content: '';
+    position: absolute;
+    inline-size: 50%;
+    block-size: 0.025rem;
+    background-color: var(--second-main-color);
+    inset-block-start: 1.8rem;
+    inset-inline-start: 0;
+    transform: translateX(50%);
+}
+
+.doctor-card:hover .doctor-card__title::after {
+    background-color: var(--fifth-color);
+}
+
+.doctor-card__description {
+    font: 1rem 400;
+    line-height: 1.6;
+    margin-block-start: 1.5rem;
+}
+
+.doctor-card__description--bold {
+    font-weight: 600;
+}
+
+.doctor-card__work-time {
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    inline-size: 100%;
+    justify-content: space-between;
+    margin-block-start: 1.5rem;
+    display: none;
+}
+
+.doctor-card:hover .doctor-card__work-time {
+    display: flex;
+}
+
+.doctor-card__icon {
+    font-weight: 400;
+    margin-inline-end: 0.3125rem;
+}
+
+@media (max-width: 75em) {
+    .doctors__cards {
+        inline-size: 100%;
+        block-size: auto;
+        grid-template-columns: repeat(auto-fill, minmax(14em, 1fr));
+    }
+
+    .doctor-card {
+        max-block-size: 27em;
+    }
+
+    .doctor-card:hover {
+        cursor: pointer;
+        height: fit-content;
+        transform: translateY(0);
+    }
+
+    .doctor-card__image {}
+
+    .doctor-card__body {
+        padding: 1rem;
+    }
+
+    .doctor-card__work-time {
+        font-size: .8rem;
+    }
+}
+
+/* End doctors section */
 
 /* End about page */
 
