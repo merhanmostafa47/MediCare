@@ -91,7 +91,7 @@ section .container {
     color: var(--second-main-color);
     font-family: 'SourceSansPro';
     font-size: 1rem;
-    inline-size: clamp(70%, 80%, 100%);
+    max-inline-size: 100%;
     margin: 1em auto 4em;
     line-height: 1.5;
 }
@@ -523,6 +523,162 @@ header .container {
 
 /* End landing */
 
+/* Start departments */
+.departments .container {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.departments__content {
+    inline-size: 90%;
+    margin: auto;
+}
+
+.tabs,
+.content-container {
+    inline-size: 100%;
+    justify-content: space-between;
+}
+
+.tab__item {
+    color: var(--second-main-color);
+    box-shadow: 0px 2px 4px 0px #4040403d;
+    border-radius: 0.375rem;
+    inline-size: 10em;
+    block-size: 6em;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+    text-transform: capitalize;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab__item:not(:last-of-type) {
+    margin-inline-end: 1.25rem;
+}
+
+
+.tab__item.active,
+.tab__item:hover {
+    background-color: var(--main-color);
+    color: var(--fifth-color);
+}
+
+.tab__item.active::after,
+.tab__item:hover::after {
+    content: '';
+    position: absolute;
+    border: 0.625rem solid;
+    border-color: #06b2b6 transparent transparent transparent;
+    inset-block-end: -1.25rem;
+    transition: 0.1s;
+}
+
+.tab__icon {
+    font-size: 1.5rem;
+    margin-block-end: 1.2rem;
+}
+
+.tab__name {
+    font-weight: 600;
+}
+
+.content-container {
+    margin-block: 3em;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.content {
+    inline-size: 48%;
+}
+
+.content__description {
+    font-family: 'SourceSansPro';
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-block-end: 2rem;
+}
+
+.content__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.25rem;
+    margin-block-end: 2em;
+}
+
+.content__list-item {
+    color: var(--second-main-color);
+    font-weight: 400;
+    font-size: .9rem;
+    position: relative;
+    margin-inline-start: 30px;
+}
+
+.content__list-item::before {
+    position: absolute;
+    content: '\f058';
+    font-family: 'Font Awesome 5 Free';
+    font-size: .9rem;
+    font-weight: 400;
+    inset-inline-start: -30px;
+}
+
+.content__image-container {
+    inline-size: 45%;
+    position: relative;
+}
+
+.content__image {
+    inline-size: 100%;
+    object-fit: cover;
+    filter: grayscale() brightness(110%);
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+}
+
+.contents>.content-container:not(:first-child) {
+    display: none;
+}
+
+@media (max-width:62em) {
+    .departments .container {
+        padding-inline: 2em;
+    }
+
+    .departments__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .tabs {
+        flex-direction: column;
+        inline-size: 20%;
+    }
+
+    .contents {
+        inline-size: 75%;
+    }
+
+    .content__image-container {
+        display: none;
+    }
+
+    .content,
+    .content__description {
+        inline-size: 100%;
+    }
+
+    .content__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+/* End departments */
+
 /* Start our services */
 
 .services .container {
@@ -568,7 +724,7 @@ header .container {
 
 .service__icon {
     color: var(--main-color);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding: 0.9375rem;
 }
 
@@ -579,7 +735,7 @@ header .container {
 .service__title {
     color: var(--second-main-color);
     font-weight: 600;
-    font-size: 1.125rem;
+    font-size: 1rem;
     text-transform: capitalize;
     margin-block: 1em 0.8em;
 }
@@ -587,7 +743,7 @@ header .container {
 .service__subtitle {
     color: var(--third-main-color);
     font-family: 'SourceSansPro';
-    font-size: 1rem;
+    font-size: .9rem;
     inline-size: 100%;
 }
 
@@ -919,7 +1075,7 @@ header .container {
     font-size: 1.15rem;
     line-height: 1.6;
     margin-block-end: 1.8em;
-    max-inline-size: clamp(70%, 80%, 90%);
+    max-inline-size: 85%;
 }
 
 .footer__icon {
@@ -976,6 +1132,10 @@ header .container {
 @media (max-width:72em) {
     .footer .container {
         grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    }
+
+    .footer__description {
+        inline-size: 100%;
     }
 
     .navigation__list {
