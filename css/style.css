@@ -527,6 +527,7 @@ header .container {
     color: var(--fifth-color);
     cursor: pointer;
     text-transform: capitalize;
+    text-align: center;
     font-weight: 600;
     padding: 0.625rem;
     transition: var(--main-transition-duration);
@@ -554,6 +555,69 @@ header .container {
 }
 
 /* End appoinment form */
+
+/* Start Model */
+.model {
+    position: absolute;
+    inset: 0;
+    block-size: 115vh;
+    justify-content: center;
+    background-color: rgba(77, 77, 77, 0.7);
+    transition: all 0.4s;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.model__content {
+    background-color: var(--main-color);
+    border-radius: 0.25rem;
+    color: var(--fifth-color);
+    flex-direction: column;
+    position: relative;
+    padding: 2em;
+    inline-size: 31.25rem;
+    max-inline-size: 90%;
+    line-height: 2.5;
+}
+
+.model__icon {
+    font-size: 3rem;
+}
+
+.model__title {
+    font-size: 2rem;
+}
+
+.model__close-btn {
+    font-size: 2rem;
+    font-weight: 600;
+    position: absolute;
+    inset-block-start: -1rem;
+    inset-inline-end: 1rem;
+    color: var(--second-main-color);
+}
+
+.model:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (max-width: 48em) {
+    .model__icon {
+        font-size: 2.5rem;
+    }
+
+    .model__title {
+        font-size: 1.5rem;
+    }
+
+    .model__description {
+        font-size: .9rem;
+    }
+}
+
+/* End Model */
 
 /* End landing */
 
