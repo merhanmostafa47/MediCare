@@ -1241,6 +1241,134 @@ header .container {
 
 /* End about page */
 
+
+/* Start departments page */
+
+/* Start FAQ & appoinmentg section */
+
+.accordion-appoinment .container {
+    inline-size: 90%;
+    margin: auto;
+    padding-block-start: 0;
+    justify-content: space-between;
+}
+
+.accordion {
+    inline-size: 50%;
+}
+
+.accordion,
+.accordion-appoinment .appoinment-form__container {
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.accordion__title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--second-main-color);
+    text-transform: uppercase;
+    margin-block-end: 2.5rem;
+}
+
+.accordion__item:not(:last-child) {
+    margin-block-end: 1rem;
+
+}
+
+.accordion__link {
+    color: var(--fifth-color);
+    background-color: var(--main-color);
+    border-radius: 0.3125rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.3rem .8rem;
+    justify-content: space-between;
+}
+
+.accordion__icons {
+    padding: .5rem;
+}
+
+.accordion__icon--remove {
+    display: none;
+}
+
+.accordion__answer {
+    background-color: var(--fifth-color);
+    box-shadow: 0 0 5px 5px #a6a6a61c;
+    max-block-size: 0;
+    overflow: hidden;
+    transition: max-block-size 650ms;
+}
+
+.accordion__answer p {
+    color: var(--second-main-color);
+    font-family: 'SourceSansPro';
+    font-weight: 400;
+    font-size: .9rem;
+    line-height: 1.5;
+    padding: 0.6rem;
+}
+
+.accordion__item:target .accordion__answer {
+    max-block-size: 20rem;
+}
+
+.accordion__item:target .accordion__icon--add {
+    display: none;
+}
+
+.accordion__item:target .accordion__icon--remove {
+    display: block;
+}
+
+.accordion__item:target .accordion__link {
+    border-radius: 0.3125rem 0.3125rem 0 0;
+}
+
+.accordion-appoinment .appoinment-form__container {
+    background-color: var(--fifth-color);
+    box-shadow: none;
+    flex-direction: column;
+    position: inherit;
+    inset-block-end: inherit;
+    transform: translateY(0);
+    inline-size: 40%;
+    min-block-size: inherit;
+    padding: 0;
+}
+
+@media (max-width: 62em) {
+    .accordion-appoinment .container {
+        inline-size: 100%;
+        flex-direction: column;
+    }
+
+    .accordion,
+    .accordion-appoinment .appoinment-form__container {
+        inline-size: 100%;
+    }
+
+    .accordion {
+        margin-block-end: 4rem;
+    }
+
+    .accordion__title,
+    .accordion-appoinment .appoinment-form__title {
+        text-align: center;
+        font-size: 1.4rem;
+        inline-size: 100%;
+        margin-block-end: 1.5rem;
+    }
+}
+
+/* End FAQ & appoinmentg section */
+
+/* End departments page */
+
 /* Start footer */
 .footer .container {
     background-image:

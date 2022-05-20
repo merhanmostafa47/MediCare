@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="../css/normalize.css" />
     <!-- Font Awsome -->
     <link rel="stylesheet" href="../css/all.min.css" />
+    <!-- IonIcons -->
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
 
@@ -91,7 +96,7 @@
     <!-- Start main -->
 
     <main>
-      <!-- Start about Page -->
+      <!-- Start departments Page -->
       <div class="page-heading">
         <div class="container flex-center">
           <h1 class="page__title">Our departments</h1>
@@ -147,9 +152,7 @@
                       <li class="content__list-item">Fast and Flex Service</li>
                       <li class="content__list-item">Care About Your Health</li>
                     </ul>
-                    <a href="pages/contact-us.html" class="about__btn"
-                      >contact us</a
-                    >
+                    <a href="contact-us.html" class="about__btn">contact us</a>
                   </div>
                   <div class="content__image-container">
                     <img
@@ -346,7 +349,119 @@
       </section>
       <!-- End departments -->
 
-      <!-- End about page -->
+      <!-- Start FAQ & appoinmentg section -->
+      <section class="accordion-appoinment">
+        <div class="container flex-center">
+          <div class="accordion flex-center">
+            <h2 class="accordion__title">Department FAQ</h2>
+            <div class="accordion__items">
+              <div class="accordion__item" id="question1">
+                <a href="#question1" class="accordion__link flex-center">
+                  question one
+                  <div class="accordion__icons">
+                    <i class="icon ion-md-add-circle accordion__icon--add"></i>
+                    <i
+                      class="icon ion-md-remove-circle accordion__icon--remove"
+                    ></i>
+                  </div>
+                </a>
+                <div class="accordion__answer">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Debitis omnis repudiandae suscipit possimus architecto unde
+                    aspernatur eum, voluptas nulla asperiores commodi sit
+                    dolorum animi odit molestiae, explicabo quam minima
+                    perspiciatis.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion__item" id="question2">
+                <a href="#question2" class="accordion__link flex-center">
+                  question two
+                  <div class="accordion__icons">
+                    <i class="icon ion-md-add-circle accordion__icon--add"></i>
+                    <i
+                      class="icon ion-md-remove-circle accordion__icon--remove"
+                    ></i>
+                  </div>
+                </a>
+                <div class="accordion__answer">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Neque, facilis harum ut deleniti sequi a sint possimus
+                    beatae animi voluptate provident magnam id voluptates et
+                    maiores dolorem facere quae!
+                  </p>
+                </div>
+              </div>
+              <div class="accordion__item" id="question3">
+                <a href="#question3" class="accordion__link flex-center">
+                  question three
+                  <div class="accordion__icons">
+                    <i class="icon ion-md-add-circle accordion__icon--add"></i>
+                    <i
+                      class="icon ion-md-remove-circle accordion__icon--remove"
+                    ></i>
+                  </div>
+                </a>
+                <div class="accordion__answer">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Neque ea architecto in nobis totam dolores nostrum
+                    obcaecati, cumque nihil, ratione unde libero accusamus dolor
+                    tenetur, explicabo deleniti asperiores sunt recusandae.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Start appoinment form -->
+          <div class="appoinment-form__container flex-center">
+            <h2 class="appoinment-form__title">make an appoinment</h2>
+            <form action="post" class="appoinment-form">
+              <input
+                name="Name"
+                type="text"
+                class="form__input"
+                placeholder="your name"
+              />
+              <input
+                name="Phone Number"
+                type="text"
+                class="form__input"
+                placeholder="your phone"
+              />
+              <input
+                name="DateTime"
+                type="datetime-local"
+                class="form__input"
+                placeholder="Date"
+              />
+              <select name="Doctor" class="form__input">
+                <option disabled hidden selected>Doctors</option>
+                <option value="Lloyd Wilson">Dr. Lloyd Wilson</option>
+                <option value="Rachel Parker">Dr. Rachel Parker</option>
+                <option value="Ian Smith">Dr. Ian Smith</option>
+                <option value="Alicia Henderson">Dr. Alicia Henderson</option>
+              </select>
+              <select name="department" class="form__input">
+                <option disabled hidden selected>Departments</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Neurology">Neurology</option>
+                <option value="Diagnostic">Diagnostic</option>
+                <option value="Dantal">Dantal</option>
+                <option value="Emergency">Emergency</option>
+                <option value="Eye Care">Eye Care</option>
+              </select>
+              <button type="submit" class="form__btn">book an appoinmet</button>
+            </form>
+          </div>
+          <!-- End appoinment form -->
+        </div>
+      </section>
+      <!-- End FAQ & appoinmentg section -->
+
+      <!-- End departments page -->
     </main>
     <!-- End main -->
 
