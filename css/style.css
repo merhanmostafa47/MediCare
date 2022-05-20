@@ -92,8 +92,37 @@ section .container {
     font-family: 'SourceSansPro';
     font-size: 1rem;
     max-inline-size: 100%;
-    margin: 1em auto 4em;
+    margin: 1em auto;
     line-height: 1.5;
+}
+
+.main-heading__icon {
+    position: relative;
+}
+
+.main-heading__icon::after,
+.main-heading__icon::before {
+    content: '';
+    position: absolute;
+    block-size: 1px;
+    inline-size: 10rem;
+    background-color: var(--second-main-color);
+    transform: translate(2.5rem, 0.625rem);
+}
+
+.main-heading__icon::after {
+    inset-inline-start: 0;
+}
+
+.main-heading__icon::before {
+    inset-inline-end: 5rem;
+}
+
+.main-heading__icon i {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-block-end: 4em;
+    color: var(--main-color);
 }
 
 @media (max-width: 48em) {
@@ -103,6 +132,11 @@ section .container {
 
     .main-heading__subtitle {
         inline-size: 100%;
+    }
+
+    .main-heading__icon::after,
+    .main-heading__icon::before {
+        inline-size: 6rem;
     }
 }
 
@@ -643,6 +677,7 @@ header .container {
     font-family: 'Font Awesome 5 Free';
     font-size: .9rem;
     font-weight: 400;
+    color: var(--main-color);
     inset-inline-start: -30px;
 }
 
