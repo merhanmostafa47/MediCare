@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
     <title>Medicare</title>
     <!-- Reset styles -->
-    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
     <!-- Font Awsome -->
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body>
@@ -45,7 +45,7 @@
             </a>
           </span>
         </div>
-        <a href="#appoinment-form" class="appoinment-btn">Appoinment</a>
+        <a href="../index.html" class="appoinment-btn">Appoinment</a>
       </div>
     </div>
     <!-- End contacts navbar -->
@@ -53,7 +53,7 @@
     <!-- Start header -->
     <header class="flex-center">
       <div class="container flex-center">
-        <a href="index.html" class="logo flex-center">MediCare</a>
+        <a href="#" class="logo flex-center">MediCare</a>
         <nav class="main-nav flex-center">
           <div class="hamburger">
             <span class="bar"></span>
@@ -62,13 +62,13 @@
           </div>
           <ul class="main-nav__list flex-center">
             <li class="main-nav__item flex-center">
-              <a href="index.html" class="main-nav__link">home</a>
+              <a href="../index.html" class="main-nav__link">home</a>
             </li>
             <li class="main-nav__item flex-center">
-              <a href="pages/about-us.html" class="main-nav__link">about</a>
+              <a href="about-us.html" class="main-nav__link">about</a>
             </li>
             <li class="main-nav__item flex-center">
-              <a href="pages/departments.html" class="main-nav__link">departments</a>
+              <a href="departments.html" class="main-nav__link">departments</a>
             </li>
             <li class="main-nav__item flex-center">
               <a href="#" class="main-nav__link">page</a>
@@ -77,7 +77,7 @@
               <a href="#" class="main-nav__link">blog</a>
             </li>
             <li class="main-nav__item flex-center">
-              <a href="pages/contact-us.html" class="main-nav__link">contact</a>
+              <a href="contact-us.html" class="main-nav__link">contact</a>
             </li>
           </ul>
           <div class="form">
@@ -91,76 +91,20 @@
     <!-- Start main -->
 
     <main>
-      <!-- Start landing -->
-      <div class="landing">
+      <!-- Start about Page -->
+      <div class="page-heading">
         <div class="container flex-center">
-          <h1 class="landing__title">we care about you</h1>
-          <p class="landing__subtitle">
-            We at MediCare are always fully focused on helping your child and
-            you to overcame any hurdle, whether it’s chicken pox or just a
-            seasonal flue.
-          </p>
-          <div class="landing__info flex-center">
-            <a
-              href="pages/about-us.html"
-              class="landing__btn landing__btn--about"
-              >about us</a
-            >
-            <a
-              href="pages/contact-us.html"
-              class="landing__btn landing__btn--contact"
-              >contact us</a
-            >
+          <h1 class="page__title">Our departments</h1>
+          <div class="page__subtitle flex-center">
+            <h2 class="page__home">home</h2>
+            <i class="fa-solid fa-angles-right page__icon"></i>
+            <h2 class="page__current">departments</h2>
           </div>
-          <!-- Start appoinment form -->
-          <div
-            class="appoinment-form__container flex-center"
-            id="appoinment-form"
-          >
-            <h2 class="appoinment-form__title">make an appoinment</h2>
-            <form action="post" class="appoinment-form">
-              <input
-                name="Name"
-                type="text"
-                class="form__input"
-                placeholder="your name"
-              />
-              <input
-                name="Phone Number"
-                type="text"
-                class="form__input"
-                placeholder="your phone"
-              />
-              <input
-                name="DateTime"
-                type="datetime-local"
-                class="form__input"
-                placeholder="Date"
-              />
-              <select name="Doctor" class="form__input">
-                <option disabled hidden selected>Doctors</option>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-              </select>
-              <select name="department" class="form__input">
-                <option disabled hidden selected>Departments</option>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-              </select>
-              <button type="submit" class="form__btn">book an appoinmet</button>
-            </form>
-          </div>
-          <!-- End appoinment form -->
         </div>
       </div>
-      <!-- End landing -->
 
-      <!-- Start departments -->
-      <section class="departments">
+     <!-- Start departments -->
+     <section class="departments">
         <div class="container flex-center">
           <div class="main-heading">
             <h2 class="main-heading__title">
@@ -206,7 +150,7 @@
                   </div>
                   <div class="content__image-container">
                     <img
-                      src="images/footer_1.webp"
+                      src="../images/footer_1.webp"
                       alt=""
                       class="content__image"
                     />
@@ -242,7 +186,7 @@
                   </div>
                   <div class="content__image-container">
                     <img
-                      src="images/footer_2.webp"
+                      src="../images/footer_2.webp"
                       alt=""
                       class="content__image"
                     />
@@ -278,7 +222,7 @@
                   </div>
                   <div class="content__image-container">
                     <img
-                      src="images/footer_3.webp"
+                      src="../images/footer_3.webp"
                       alt=""
                       class="content__image"
                     />
@@ -314,7 +258,7 @@
                   </div>
                   <div class="content__image-container">
                     <img
-                      src="images/footer_4.webp"
+                      src="../images/footer_4.webp"
                       alt=""
                       class="content__image"
                     />
@@ -350,7 +294,7 @@
                   </div>
                   <div class="content__image-container">
                     <img
-                      src="images/footer_5.webp"
+                      src="../images/footer_5.webp"
                       alt=""
                       class="content__image"
                     />
@@ -386,7 +330,7 @@
                   </div>
                   <div class="content__image-container">
                     <img
-                      src="images/footer_2.webp"
+                      src="../images/footer_2.webp"
                       alt=""
                       class="content__image"
                     />
@@ -399,103 +343,7 @@
       </section>
       <!-- End departments -->
 
-      <!-- Start our service -->
-      <section class="services flex-center">
-        <div class="container">
-          <div class="main-heading">
-            <h2 class="main-heading__title">
-              OUR <span class="main-heading__title--cyan">service</span>
-            </h2>
-            <p class="main-heading__subtitle">
-              We are always fully focused on helping you with great commitment
-              and easy recovery.
-            </p>
-          </div>
-          <div class="services__cards">
-            <div class="service__card flex-center">
-              <div class="service__icon-container flex-center">
-                <i class="fa-solid fa-heart-pulse service__icon"></i>
-              </div>
-              <h3 class="service__title">Heart Surgery</h3>
-              <p class="service__subtitle">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              </p>
-            </div>
-
-            <div class="service__card flex-center">
-              <div class="service__icon-container flex-center">
-                <i class="fa-solid fa-tooth service__icon"></i>
-              </div>
-              <h3 class="service__title">Dental Care</h3>
-              <p class="service__subtitle">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              </p>
-            </div>
-
-            <div class="service__card flex-center">
-              <div class="service__icon-container flex-center">
-                <i class="fa-solid fa-truck-medical service__icon"></i>
-              </div>
-
-              <h3 class="service__title">Emargency Service</h3>
-              <p class="service__subtitle">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              </p>
-            </div>
-
-            <div class="service__card flex-center">
-              <div class="service__icon-container flex-center">
-                <i class="fa-solid fa-dna service__icon"></i>
-              </div>
-              <h3 class="service__title">DNA Testing</h3>
-              <p class="service__subtitle">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              </p>
-            </div>
-
-            <div class="service__card flex-center">
-              <div class="service__icon-container flex-center">
-                <i class="fa-solid fa-briefcase-medical service__icon"></i>
-              </div>
-              <h3 class="service__title">Blood Testing</h3>
-              <p class="service__subtitle">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              </p>
-            </div>
-
-            <div class="service__card flex-center">
-              <div class="service__icon-container flex-center">
-                <i class="fa-solid fa-hand-holding-medical service__icon"></i>
-              </div>
-              <h3 class="service__title">24/7 Support</h3>
-              <p class="service__subtitle">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              </p>
-            </div>
-
-            <div class="service__card flex-center">
-              <div class="service__icon-container flex-center">
-                <i class="fa-solid fa-capsules service__icon"></i>
-              </div>
-              <h3 class="service__title">General Treatment</h3>
-              <p class="service__subtitle">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              </p>
-            </div>
-
-            <div class="service__card flex-center">
-              <div class="service__icon-container flex-center">
-                <i class="fa-solid fa-file-medical service__icon"></i>
-              </div>
-              <h3 class="service__title">Free Checkup</h3>
-              <p class="service__subtitle">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End our service -->
+      <!-- End about page -->
     </main>
     <!-- End main -->
 
@@ -562,12 +410,12 @@
         <div class="footer__instgram">
           <h2 class="footer__title">instgram</h2>
           <div class="footer__images">
-            <img src="images/footer_1.webp" alt="" class="footer__img" />
-            <img src="images/footer_2.webp" alt="" class="footer__img" />
-            <img src="images/footer_3.webp" alt="" class="footer__img" />
-            <img src="images/footer_4.webp" alt="" class="footer__img" />
-            <img src="images/footer_5.webp" alt="" class="footer__img" />
-            <img src="images/footer_6.webp" alt="" class="footer__img" />
+            <img src="../images/footer_1.webp" alt="" class="footer__img" />
+            <img src="../images/footer_2.webp" alt="" class="footer__img" />
+            <img src="../images/footer_3.webp" alt="" class="footer__img" />
+            <img src="../images/footer_4.webp" alt="" class="footer__img" />
+            <img src="../images/footer_5.webp" alt="" class="footer__img" />
+            <img src="../images/footer_6.webp" alt="" class="footer__img" />
           </div>
         </div>
       </div>
