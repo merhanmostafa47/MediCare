@@ -7,3 +7,5 @@
 - [Responsive FAQ accordion dropdown](https://youtu.be/MXrtXg1kpVs)
 
 - [Create Modal Popup Box using Only HTML | CSS ](https://youtu.be/0biS-Ul27i4)
+
+- [Responsive Slider Using HTML & CSS Only](https://youtu.be/1CZhGDU5cWM)

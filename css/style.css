@@ -1294,8 +1294,6 @@ header .container {
         transform: translateY(0);
     }
 
-    .doctor-card__image {}
-
     .doctor-card__body {
         padding: 1rem;
     }
@@ -1306,6 +1304,181 @@ header .container {
 }
 
 /* End doctors section */
+
+/* Start feedback section */
+.patients-feedback .container {
+    background: url(../images/feedback_bg.jpg) no-repeat;
+    background-size: cover;
+    inline-size: 100%;
+}
+
+.slider {
+    margin: 0 auto;
+    inline-size: 50rem;
+    max-inline-size: 100%;
+}
+
+.slider input[type=radio] {
+    display: none;
+}
+
+.slider label {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.slides {
+    padding: 0.625rem;
+    margin-block-end: 3em;
+    position: relative;
+    z-index: 1;
+}
+
+.overflow {
+    inline-size: 100%;
+    overflow: hidden;
+}
+
+#slide1:checked~.slides .inner {
+    margin-inline-start: 0;
+}
+
+#slide2:checked~.slides .inner {
+    margin-inline-start: -100%;
+}
+
+#slide3:checked~.slides .inner {
+    margin-inline-start: -200%;
+}
+
+#slide4:checked~.slides .inner {
+    margin-inline-start: -300%;
+}
+
+.slides .inner {
+    transition: margin-inline-start 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    inline-size: 400%;
+    block-size: 18.75rem;
+}
+
+.slides .slide {
+    inline-size: 25%;
+    float: left;
+    justify-content: center;
+}
+
+.slide__content {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slide__feedback {
+    color: var(--second-main-color);
+    font-family: 'SourceSansPro';
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 1.6;
+    margin-block-end: 1.5rem;
+}
+
+.slide__person-name {
+    color: var(--main-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.slide__person-postion {
+    color: var(--third-main-color);
+    text-transform: capitalize;
+    margin-block: 0.5rem 1.5rem;
+}
+
+.slide__person-image {
+    border: 0.1875rem solid var(--main-color);
+    border-radius: 50%;
+    inline-size: 5rem;
+    padding: 0.125rem;
+}
+
+.controls {
+    margin: -9.375rem 0 0 0;
+    inline-size: 100%;
+    block-size: 3.125rem;
+    z-index: 3;
+    position: relative;
+}
+
+.controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    inline-size: 3.125rem;
+    block-size: 3.125rem;
+    opacity: .4;
+}
+
+.controls label:hover {
+    opacity: 1;
+}
+
+#slide1:checked~.controls label:nth-child(2),
+#slide2:checked~.controls label:nth-child(3),
+#slide3:checked~.controls label:nth-child(4),
+#slide4:checked~.controls label:nth-child(1) {
+    background: url(../images/feedback_right-arrow.png) no-repeat;
+    float: right;
+    margin: 0 -3.125rem 0 0;
+    display: block;
+}
+
+#slide1:checked~.controls label:nth-child(4),
+#slide2:checked~.controls label:nth-child(1),
+#slide3:checked~.controls label:nth-child(2),
+#slide4:checked~.controls label:nth-child(3) {
+    background: url(../images/feedback_left-arrow.png) no-repeat;
+    float: left;
+    margin: 0 0 0 -3.125rem;
+    display: block;
+}
+
+.bullets {
+    margin: 9.375rem 0 0;
+    text-align: center;
+}
+
+.bullets label {
+    display: inline-block;
+    inline-size: 0.625rem;
+    block-size: 0.625rem;
+    border-radius: 100%;
+    background-color: #ccc;
+    margin: 0 .625rem;
+}
+
+#slide1:checked~.bullets label:nth-child(1),
+#slide2:checked~.bullets label:nth-child(2),
+#slide3:checked~.bullets label:nth-child(3),
+#slide4:checked~.bullets label:nth-child(4) {
+    background-color: var(--second-main-color);
+}
+
+@media (max-width:62em) {
+
+    #slide1:checked~.controls label:nth-child(2),
+    #slide2:checked~.controls label:nth-child(3),
+    #slide3:checked~.controls label:nth-child(4),
+    #slide4:checked~.controls label:nth-child(1),
+    #slide1:checked~.controls label:nth-last-child(2),
+    #slide2:checked~.controls label:nth-last-child(3),
+    #slide3:checked~.controls label:nth-last-child(4),
+    #slide4:checked~.controls label:nth-last-child(1) {
+        margin: 0;
+    }
+
+}
+
+/* End feedback section */
 
 /* End about page */
 
