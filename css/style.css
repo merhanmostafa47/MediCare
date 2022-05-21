@@ -1329,7 +1329,6 @@ header .container {
 
 .slides {
     padding: 0.625rem;
-    margin-block-end: 3em;
     position: relative;
     z-index: 1;
 }
@@ -1398,8 +1397,8 @@ header .container {
 .slide__person-image {
     border: 0.1875rem solid var(--main-color);
     border-radius: 50%;
-    inline-size: 5rem;
-    padding: 0.125rem;
+    inline-size: 7rem;
+    padding: 0.2rem;
 }
 
 .controls {
@@ -1438,7 +1437,7 @@ header .container {
 #slide4:checked~.controls label:nth-child(3) {
     background: url(../images/feedback_left-arrow.png) no-repeat;
     float: left;
-    margin: 0 0 0 -3.125rem;
+    margin: 0 0 0 -1rem;
     display: block;
 }
 
@@ -1463,17 +1462,17 @@ header .container {
     background-color: var(--second-main-color);
 }
 
-@media (max-width:62em) {
+@media (max-width:60em) {
 
     #slide1:checked~.controls label:nth-child(2),
     #slide2:checked~.controls label:nth-child(3),
     #slide3:checked~.controls label:nth-child(4),
     #slide4:checked~.controls label:nth-child(1),
-    #slide1:checked~.controls label:nth-last-child(2),
-    #slide2:checked~.controls label:nth-last-child(3),
-    #slide3:checked~.controls label:nth-last-child(4),
-    #slide4:checked~.controls label:nth-last-child(1) {
-        margin: 0;
+    #slide1:checked~.controls label:nth-child(4),
+    #slide2:checked~.controls label:nth-child(1),
+    #slide3:checked~.controls label:nth-child(2),
+    #slide4:checked~.controls label:nth-child(3) {
+        margin: -1rem;
     }
 
 }
