@@ -892,9 +892,13 @@ header .container {
 /* End index main */
 
 /* Start contact main */
+.location .container {
+    padding-block-end: 0;
+}
+
 .map .container {
     padding-inline: 0;
-    padding-block: 10em 0;
+    padding: 0;
 }
 
 .contact-form .container {
