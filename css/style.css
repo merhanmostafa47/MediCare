@@ -1031,6 +1031,7 @@ header .container {
 
 .about__btn {
     background-color: var(--main-color);
+    border: 1px solid transparent;
     border-radius: 0.5rem;
     color: var(--fifth-color);
     display: block;
