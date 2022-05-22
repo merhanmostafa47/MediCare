@@ -1193,6 +1193,7 @@ header .container {
     text-align: center;
     overflow: hidden;
     block-size: 25em;
+    transition: var(--main-transition-duration);
 }
 
 .doctor-card:hover {
