@@ -830,7 +830,7 @@ header .container {
     text-align: center;
     padding: 1.875rem;
     border-radius: 5px;
-    transition: 0.1s all;
+    transition: var(--main-transition-duration) all;
 }
 
 .service__card:hover {
