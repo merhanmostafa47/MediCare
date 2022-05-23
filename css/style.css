@@ -1658,12 +1658,13 @@ header .container {
 }
 
 .main-nav__item {
-    transition: 0.5s;
     text-transform: capitalize;
+    transition: transform 0.4s ease-in-out;
 }
 
 .navigation__item:hover {
     transform: translateX(0.75rem);
+    transition: transform 0.4s ease-in-out;
     font-weight: 600;
 }
 
