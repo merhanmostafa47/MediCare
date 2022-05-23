@@ -906,6 +906,7 @@ header .container {
 }
 
 .contact-form__container {
+    max-inline-size: 85%;
     align-items: flex-start;
     justify-content: space-between;
     background-color: var(--fifth-color);
@@ -937,7 +938,8 @@ header .container {
 
 .form__textarea {
     grid-column: span 2;
-    block-size: 13em;
+    max-block-size: 13em;
+    max-inline-size: 100%;
 }
 
 .contact-form__container .contact-info {
