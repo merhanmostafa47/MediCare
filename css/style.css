@@ -938,7 +938,8 @@ header .container {
 
 .form__textarea {
     grid-column: span 2;
-    max-block-size: 13em;
+    block-size: 13em;
+    max-block-size: 16em;
     max-inline-size: 100%;
 }
 
