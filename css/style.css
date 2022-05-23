@@ -939,6 +939,7 @@ header .container {
 .form__textarea {
     grid-column: span 2;
     block-size: 13em;
+    min-block-size: 10em;
     max-block-size: 16em;
     max-inline-size: 100%;
 }
@@ -964,7 +965,7 @@ header .container {
     }
 
     .contact-form__container {
-        inline-size: 100%;
+        min-inline-size: 100%;
         transform: translateY(0);
         padding: 1.25rem;
         flex-direction: column;
